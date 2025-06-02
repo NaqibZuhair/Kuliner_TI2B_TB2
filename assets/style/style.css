@@ -22,7 +22,7 @@ header {
 
 .header-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     gap:10px;
     padding: 10px 0;
@@ -34,7 +34,7 @@ header {
 .header-logo {
     display: flex;
     align-items: center;
-    margin-top : 10px;
+    margin-top : 5px;
 }
 
 .header-logo img {
@@ -57,7 +57,7 @@ header {
 nav ul {
     list-style: none;
     display: flex;
-    gap:30px;
+    gap:70px;
     margin-left: auto;
 }
 
@@ -70,4 +70,36 @@ nav a {
 
 nav a:hover {
     color: #954C2E;
+}
+
+#hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/hero-background.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #254D70;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #EFE4D2;
+    color: #131D4F;
 }
