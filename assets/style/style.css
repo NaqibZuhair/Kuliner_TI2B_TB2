@@ -7,11 +7,11 @@
 body {
     font-family: 'Arial', sans-serif;
     background-color: #EFE4D2;
-    color: #131D4F;
+    color: #666;
 }
 
 header {
-    background-color:#254D70;
+    background-color:#537D5D;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -56,12 +56,11 @@ nav ul {
 nav a {
     text-decoration: none;
     color: #EFE4D2;
-    /* font-weight: bold; */
     font-size: 18px;
 }
 
 nav a:hover {
-    color: #954C2E;
+    color: #D2D0A0;
 }
 
 #hero {
@@ -78,24 +77,33 @@ nav a:hover {
 }
 
 .hero-content {
-    /* background-color: rgba(0, 0, 0, 0.5); */
     padding: 20px;
     border-radius: 10px;
 }
 
 #hero button {
     padding: 15px 30px;
-    background-color: #254D70;
+    background-color: #537D5D;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
 button:hover {
     background-color: #EFE4D2;
     color: #131D4F;
+}
+
+.container {
+    margin: 0 50px;
+    padding: 30px;
+}
+
+.menu {
+    background-color: #D2D0A0;
 }
 
 .menu1  {
@@ -137,26 +145,71 @@ button:hover {
 }
 
 .about-section {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr; /* Membuat kolom besar dan dua kolom kecil */
+    background-color: #9EBC8A;
+}
+
+#about-section {
+    display: flex;
+    justify-content: space-between;
     gap: 20px;
     padding: 20px;
 }
 
 .about-box {
-    background-color: #f0f0f0;
-    padding: 20px;
+    padding: 0;
     border-radius: 8px;
     text-align: center;
     box-sizing: border-box;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .large-box {
-    grid-column: span 2; /* Membuat kotak besar mengambil dua kolom */
+    flex: 2;
+    background-color: #f0f0f0;
+}
+
+.small-box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+}
+
+.slide-text {
+    list-style-type: none;
+}
+
+.small-item {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
 }
 
 .about-box p {
     font-size: 1rem;
     color: #666;
+    text-align: justify;
+}
+
+.about-second-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    background-color: #D2D0A0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.about-second-section p {
+    flex: 1;
+    background-color: #f0f0f0;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+footer {
+    background-color: #537D5D;
+    color: #EFE4D2;
+    text-align: center;
+    padding: 20px 0;
 }
