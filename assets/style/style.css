@@ -102,15 +102,19 @@ button:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 10px;
 }
 
 .menu2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* flex-direction: column; */
-    gap: 200px;
+    gap: 20px;
+}
+
+.menu1 .menu-item {
+  flex: 1 1 30%;
+  width: 100%;
 }
 
 .menu-item {
@@ -120,10 +124,10 @@ button:hover {
 }
 
 .menu-item img {
-  width: 100%;
+  width: 50%;
   height: auto;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 30px;
 }
 
 .menu-item h2 {
