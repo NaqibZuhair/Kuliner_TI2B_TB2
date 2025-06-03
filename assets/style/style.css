@@ -64,10 +64,10 @@ nav a:hover {
 }
 
 #hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/hero-background.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/hero-background1.jpg');
     background-size: cover;
     background-position: center;
-    height: 70vh;
+    height: 100vh;
     display: flex;
     justify-content: start;
     align-items: center;
@@ -121,31 +121,37 @@ button:hover {
 }
 
 .menu1 .menu-item {
-  flex: 1 1 30%;
-  width: 100%;
+    flex: 1 1 30%;
+    width: 100%;
 }
 
 .menu-item {
-  padding: 20px;
-  text-align: center;
-  overflow: hidden;
+    padding: 20px;
+    text-align: center;
+    overflow: hidden;
 }
 
 .menu-item img {
-  width: 50%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 30px;
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 30px;
+    transition: transform 0.3s ease;
+}
+
+.menu-item img:hover {
+    transform: scale(1.05);   
 }
 
 .menu-item h2 {
-  font-size: 1.2rem;
-  margin-top: 10px;
-  color: #333;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #333;
 }
 
 .about-section {
     background-color: #9EBC8A;
+    padding: 40px 0;
 }
 
 #about-section {
@@ -153,6 +159,7 @@ button:hover {
     justify-content: space-between;
     gap: 20px;
     padding: 20px;
+    flex-wrap: wrap ;
 }
 
 .about-box {
@@ -160,6 +167,7 @@ button:hover {
     border-radius: 8px;
     text-align: center;
     box-sizing: border-box;
+    width: 100%;
 }
 
 .large-box {
@@ -174,27 +182,87 @@ button:hover {
     flex: 1;
 }
 
-.slide-text {
-    list-style-type: none;
-}
-
 .small-item {
     background-color: #f0f0f0;
     padding: 20px;
     border-radius: 8px;
 }
 
+.about-box h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: bold;
+}
+
+.dynamic-text {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: 200px; /* Adjust this based on how many items you want to display at once */
+    overflow: hidden;
+}
+
+.dynamic-text li {
+    display: inline-block; /* Keeps items in a line */
+    width: 100%; /* Each item takes full width of the container */
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 2;
+    padding: 10px 0;
+    animation: slide 12s steps(14) infinite; /* Adjust steps to match your list length */
+}
+
+@keyframes slide {
+    0% {
+        transform: translateY(100%); /* Starts from below */
+    }
+    50% {
+        transform: translateY(0); /* Normal position */
+    }
+    100% {
+        transform: translateY(-100%); /* Ends up above */
+    }
+}
+
+.dynamic-text li span {
+    position: relative;
+    margin: 5px 0;
+    line-height: 90px;
+}
+
+.dynamic-text li span::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    height: 78px;
+    width: 100%;
+    background: #000000;
+    border-left: 2px solid #fff;
+    animation: typing 3s steps(14) infinite; /* Adjust for typing effect speed */
+}
+
+@keyframes typing {
+    40%,
+    60% {
+        left: calc(100% + 30px);
+    }
+    100% {
+        left: 0;
+    }
+}
+
 .about-box p {
     font-size: 1rem;
     color: #666;
     text-align: justify;
+    align-items: center;
+
 }
 
 .about-second-section {
     display: flex;
     justify-content: space-between;
-    gap: 20px;
-    padding: 20px;
     background-color: #D2D0A0;
     width: 100%;
     box-sizing: border-box;
