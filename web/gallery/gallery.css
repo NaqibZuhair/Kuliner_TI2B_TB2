@@ -93,7 +93,7 @@ nav a:hover {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 50px;
-    justify-items: center; /* Menjaga gambar tetap di tengah */
+    justify-items: center;
     margin-bottom: 50px; 
 }
 
@@ -101,15 +101,15 @@ nav a:hover {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 100px;
-    justify-items: center; /* Menjaga gambar tetap di tengah */
+    justify-items: center;
 }
 
 .gallery-item img {
-    width: 100%; /* Agar gambar mengisi kolom */
+    width: 100%;
     height: 350px;
-    border-radius: 8px; /* Menambahkan sudut melengkung pada gambar */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan lembut di sekitar gambar */
-    transition: transform 0.3s ease; /* Menambahkan transisi saat hover */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease;
 }
 
 .gallery-item img:hover {
