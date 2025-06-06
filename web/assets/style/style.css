@@ -102,10 +102,6 @@ button:hover {
     padding: 30px;
 }
 
-.menu {
-    background-color: #D2D0A0;
-}
-
 .menu1  {
     display: flex;
     flex-wrap: wrap;
@@ -263,7 +259,7 @@ button:hover {
 .about-second-section {
     display: flex;
     justify-content: space-between;
-    background-color: #D2D0A0;
+    /* background-color: #D2D0A0; */
     width: 100%;
     box-sizing: border-box;
 }
