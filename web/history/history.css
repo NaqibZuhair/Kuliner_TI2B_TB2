@@ -85,6 +85,33 @@ nav a:hover {
     color: black;
 }
 
+.text-center {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2.5rem;
+    color: #537D5D;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 50px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.social-icons a {
+    font-size: 2.5rem;
+    color: #537D5D;
+    transition: transform 0.3s ease, color 0.3s ease;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+    color: #270606;
+}
+
 .container {
     width: 80%;
     margin: 20px auto;
@@ -134,10 +161,10 @@ nav a:hover {
     color: #537D5D;
     font-family: 'Merriweather', serif;
     font-weight: bold;
-    white-space: nowrap; /* Agar teks tetap berada dalam satu baris */
-    overflow: hidden; /* Sembunyikan teks yang belum "ditulis" */
-    border-right: 4px solid #537D5D; /* Garis yang meniru kursor ketik */
-    animation: typing 3s steps(30) 1s forwards, blink-caret 0.75s step-end infinite; /* Efek mengetik dan kursor berkedip */
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 4px solid #537D5D;
+    animation: typing 3s steps(30) 1s forwards, blink-caret 0.75s step-end infinite;
     width: 100%;
 }
 
@@ -146,39 +173,11 @@ nav a:hover {
     font-size: 1.1rem;
     text-align: justify;
     letter-spacing: 0.5px;
-    /* white-space: nowrap; */
     line-height: 1.8;
     overflow: hidden;
-    width: 100%; /* Pastikan paragraf memiliki lebar penuh */
+    width: 100%;
     animation: typing 5s steps(50) 1s forwards;
     margin-top: 5px;
-}
-
-/* Animasi mengetik (mengubah lebar teks dari 0 ke 100%) */
-/* @keyframes typing {
-    from {
-        width: 0;
-    }
-    to {
-        width: 100%; 
-    }
-} */
-
-/* Animasi kursor yang berkedip */
-/* @keyframes blink-caret {
-    50% {
-        border-color: transparent;
-    }
-} */
-
-/* Animasi typing untuk paragraf lebih lama */
-@keyframes typing {
-    from {
-        width: 0;
-    }
-    to {
-        width: 100%;
-    }
 }
 
 footer {

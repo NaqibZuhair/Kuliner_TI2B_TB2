@@ -63,69 +63,90 @@ nav a:hover {
     color: #D2D0A0;
 }
 
-.heading-section {
+.heading-with-line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    margin: 20px 60px;
+    font-size: 2rem;
+    padding: 30px 0;
+}
+
+.heading-with-line::before,
+.heading-with-line::after {
+    content: "";
+    flex: 1;
+    border-top: 1px solid #020202;
+    margin: 0 15px;
+}
+
+.heading-with-line span {
+    font-weight: bold;
+    color: black;
+}
+
+.heading-section-main {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
 }
 
 .heading-container {
     display: flex;
+    justify-content: space-between;
     width: 100%;
-    text-align: center;
-    align-items: center;
-    justify-content: space-around;
-    background-color: #D2D0A0;
-    padding: 20px;
-    margin: 40px auto;
-    border-radius: 30px;
+    max-width: 1200px;
+    gap: 70px;
 }
 
-.heading-container > div {
+.maps, .form-messege {
     flex: 1;
-    padding: 10px;
-    margin: 50px;
-    border-radius: 20px;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-#maps-messege {
-    background-color: #f0f0f0;
-    padding: 10px;
+.maps iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    border: none;
 }
 
 .form-group {
-    /* background-color: aliceblue; */
-    padding: 5px 100px;
+    margin-bottom: 8px;
 }
 
 .form-group input,
-textarea {
+.form-group textarea {
     width: 100%;
-    height: 40px;
-    max-width: 350px;
-    font-size: 1rem;
-    border-radius: 10px;
     padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-top: 8px;
+    font-size: 1rem;
 }
 
 textarea {
-    width: 350px;
     height: 200px;
-    max-height: 200px;
-    max-width: 350px;
-    /* min-height: 220px;
-    min-width: 400px; */
-    /* border: 2px solid black; */
 }
 
+/* Tombol Kirim */
 .submit-btn {
     background-color: #537D5D;
-    color: #EFE4D2;
+    color: white;
     border: none;
     padding: 10px 20px;
-    border-radius: 10px;
+    border-radius: 8px;
     cursor: pointer;
     font-size: 1rem;
-    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.submit-btn:hover {
+    background-color: #D2D0A0;
+    color: #537D5D;
 }
 
 /* Social Section */
@@ -133,20 +154,17 @@ textarea {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 40px;
     width: 100%;
 }
 
 .social-container {
     display: flex;
-    background-color: #D2D0A0;
     justify-content: center;
     align-items: center;
     gap: 20px;
     width: 100%;
     padding: 20px;
-    margin: 50px 200px;
-    margin-top: 10px;
+    margin: 0 200px;
     border-radius: 30px;
 }
 
