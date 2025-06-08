@@ -5,9 +5,9 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Roboto', sans-serif;
     background-color: #EFE4D2;
-    color: #666;
+    color: #333;
 }
 
 header {
@@ -130,14 +130,55 @@ nav a:hover {
 
 .text-info h2 {
     margin-bottom: 10px;
-    font-size: 1.5rem;
-    color: #333;
+    font-size: 2rem;
+    color: #537D5D;
+    font-family: 'Merriweather', serif;
+    font-weight: bold;
+    white-space: nowrap; /* Agar teks tetap berada dalam satu baris */
+    overflow: hidden; /* Sembunyikan teks yang belum "ditulis" */
+    border-right: 4px solid #537D5D; /* Garis yang meniru kursor ketik */
+    animation: typing 3s steps(30) 1s forwards, blink-caret 0.75s step-end infinite; /* Efek mengetik dan kursor berkedip */
+    width: 100%;
 }
 
 .text-info p {
-    color: #555;
-    font-size: 1rem;
+    color: #666;
+    font-size: 1.1rem;
     text-align: justify;
+    letter-spacing: 0.5px;
+    /* white-space: nowrap; */
+    line-height: 1.8;
+    overflow: hidden;
+    width: 100%; /* Pastikan paragraf memiliki lebar penuh */
+    animation: typing 5s steps(50) 1s forwards;
+    margin-top: 5px;
+}
+
+/* Animasi mengetik (mengubah lebar teks dari 0 ke 100%) */
+/* @keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%; 
+    }
+} */
+
+/* Animasi kursor yang berkedip */
+/* @keyframes blink-caret {
+    50% {
+        border-color: transparent;
+    }
+} */
+
+/* Animasi typing untuk paragraf lebih lama */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
 }
 
 footer {
