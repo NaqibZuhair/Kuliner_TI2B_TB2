@@ -1,174 +1,168 @@
-import React from 'react'
-import logo from './assets/images/logo.jpg'
-import './css/style.css'
+import './App.css';
+import logo from './assets/images/logo.jpg';
+import steak from './assets/images/Steak.webp';
+import cheese from './assets/images/CheeseSauce.webp';
+import cheesychicken from './assets/images/CheesyChicken.jpg';
+import cordonbleu from './assets/images/CordonBleu.jpg';
+import chickenkatsu from './assets/images/ChickenKatsu.jpg';
+import brownies from './assets/images/Brownies.webp';
+import Header from './components/Header/Header';
 
-const Header = () => (
-  <header className="header">
-    <div className="header-container">
-      <div className="header-logo">
-        <img src={logo} alt="Glass House Logo" />
+
+const HeroSection = () => {
+  return (
+    <section id="hero">
+      <div className="container">
+        <div className="hero-content">
+          <h1>Glass House</h1>
+          <button>Contact</button>
+        </div>
       </div>
-      <nav className="header-nav">
-        <ul>
-          <li><a href="./index.html">Home</a></li>
-          <li><a href="./history/history.html">History</a></li>
-          <li><a href="./gallery/gallery.html">Gallery</a></li>
-          <li><a href="./contact/contact.html">Contact Us</a></li>
-        </ul>
-      </nav>
+    </section>
+  );
+};
+
+const MenuSection = () => {
+  return (
+    <section className="menu">
+      <div className="category">
+        <h2 className="ctg"><div>Breakfast</div></h2>
+        <h2 className="ctg"><div>Lunch</div></h2>
+        <h2 className="ctg"><div>Dessert</div></h2>
+      </div>
+
+      <div className="container">
+        <div className="menu1">
+          <div className="menu-item">
+            <img src={steak} alt="Menu Item 1" />
+            <div className="desc">
+              <h3>Sirloin Meltique Steak</h3>
+            </div>
+          </div>
+
+          <div className="menu-item">
+            <img src={brownies} alt="Menu Item 1" />
+            <div className="desc">
+              <h3>Brownies</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const AboutSection = () => {
+  return (
+    <section className="about-section">
+      <div className="container" id="about-section">
+        <div className="about-box large-box">
+          <div className="small-item">
+            <p>
+              The Glass House Resto Bogor menyediakan makanan yang lezat dan
+              terjangkau, dengan menu yang bervariasi...
+            </p>
+          </div>
+
+          <div className="small-item">
+            <p>
+              Restoran ini terbagi ke dalam beberapa area dengan nuansa
+              berbeda: ada Main Hall yang mewah...
+            </p>
+          </div>
+
+          <div className="small-item">
+            <p>
+              The Glass House menawarkan beragam menu seperti hidangan Asia dan Western
+            </p>
+          </div>
+        </div>
+        <div className="about-box small-box">
+          <div className="small-item">
+            <h2>Menu Kami</h2>
+            <ul className="dynamic-text">
+              <li>Sirloin Meltique Steak</li>
+              <li>Chicken Katsu Cheese Sauce</li>
+              <li>The Glass Houses Brownies</li>
+              <li>Cheesy Chicken Fried Rice</li>
+              <li>Autumn Beef Bowl</li>
+              <li>Chicken Chili Wings</li>
+              <li>Nasi Ayam Cabai Hijau</li>
+              <li>Dori Sambal Bongkot</li>
+              <li>Crusted John Dory Fish</li>
+              <li>Rustic Egg Benedict</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const MenuItem = ({ image, title, description }) => {
+  return (
+    <div className="menu-row">
+      <img src={image} alt="Foto menu" className="menu-photo" />
+      <div className="menu-text">{description}</div>
     </div>
-  </header>
-);
+  );
+};
 
-const Hero = () => (
-  <section id="hero">
-    <div className="container">
-      <div className="hero-content">
-        <h1>Glass House</h1>
-        <button>Contact</button>
+const MenuContent = () => {
+  return (
+    <section className="menu-section">
+      <h2 className="menu-title">
+        <span className="line"></span>
+        Top 3 Menu
+        <span className="line"></span>
+      </h2>
+
+      <MenuItem
+        image={cheesychicken}
+        title="Cheesy Chicken Fried Rice"
+        description="Cheesy Chicken Fried Rice"
+      />
+
+      <div className="divider"></div>
+
+      <MenuItem
+        image={cordonbleu}
+        title="Chicken Cordon Bleu"
+        description="Chicken Cordon Bleu"
+      />
+
+            <div className="divider"></div>
+
+      <MenuItem
+        image={chickenkatsu}
+        title="Fettucine Carbonara with Chicken Katsu.jpg"
+        description="Fettucine Carbonara with Chicken Katsu"
+      />
+    </section>
+  );
+};
+
+const Footer = () => {
+  return (
+    <footer className="footer">
+      <div className="footer-container">
+        <p>&copy; 2025 Glass House. By Naqib & Sello.</p>
       </div>
+    </footer>
+  );
+};
+
+const App = () => {
+  return (
+    <div className="App">
+      <Header />
+      <HeroSection />
+      <MenuSection />
+      <AboutSection />
+      <MenuContent />
+      <Footer />
     </div>
-  </section>
-);
-
-const Menu = () => (
-  <section className="menu">
-    <div className="container">
-      <div className="menu1">
-        <div className="menu-item">
-          <img src="./assets/images/Chicken Cordon Bleu.jpg" alt="Menu Item 1" />
-          <h2>Chicken Cordon Bleu</h2>
-        </div>
-        <div className="menu-item">
-          <img src="./assets/images/Chicken Cordon Bleu.jpg" alt="Menu Item 1" />
-          <h2>Chicken Cordon Bleu</h2>
-        </div>
-        <div className="menu-item">
-          <img src="./assets/images/Chicken Cordon Bleu.jpg" alt="Menu Item 1" />
-          <h2>Chicken Cordon Bleu</h2>
-        </div>
-      </div>
-      <div className="menu2">
-        <div className="menu-item">
-          <img src="./assets/img/Menu2.jpg" alt="Menu Item 1" />
-          <h2>Menu Item</h2>
-        </div>
-        <div className="menu-item">
-          <img src="./assets/img/Menu2.jpg" alt="Menu Item 1" />
-          <h2>Menu Item</h2>
-        </div>
-      </div>
-    </div>
-  </section>
-);
-
-const AboutSection = () => (
-  <section className="about-section">
-    <div className="container" id="about-section">
-      <div className="about-box large-box">
-        <div className="small-item">
-          <h2>Menu Kami</h2>
-          <ul className="dynamic-text">
-            <li>Mushroom & Fries</li>
-            <li>Chicken Chili Wings</li>
-            <li>Pangsit Ayam Bongkot</li>
-            <li>Nasi Goreng Cumi Kemangi</li>
-            <li>Nasi Goreng Buntut</li>
-            <li>Nasi Bakar Krengsengan Daging</li>
-            <li>Lontong Cap Gomeh</li>
-            <li>Nasi Ayam Cabai Hijau</li>
-            <li>Paha Ayam Bakar Ketumbar</li>
-            <li>Dori Sambal Bongkot</li>
-            <li>Chicken Caesar Salad</li>
-            <li>Crusted John Dory Fish</li>
-            <li>Rustic Egg Benedict</li>
-            <li>Chicken Mozza</li>
-          </ul>
-        </div>
-      </div>
-      <div className="about-box small-box">
-        <div className="small-item">
-          <p>
-            The Glass House Resto Bogor menyediakan makanan yang lezat dan terjangkau, dengan menu yang bervariasi. Restoran ini cocok untuk dikunjungi bersama keluarga atau teman-teman, dan juga cocok untuk acara-acara khusus seperti perayaan ulang tahun atau pernikahan. Jangan lupa untuk mengambil beberapa foto di restoran ini, karena tempat ini sangat Instagramable!
-          </p>
-        </div>
-        <div className="small-item">
-          <p>
-            Restoran ini terbagi ke dalam beberapa area dengan nuansa berbeda: ada Main Hall yang mewah, Flower Area yang romantis, Garden Area yang alami, dan tentu saja Glass House yang menjadi ikon utama. Kalian bisa memilih duduk di area favorit sesuai dengan mood atau keperluan, mulai dari kumpul santai, rapat, hingga makan malam romantis.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-);
-
-const AboutSecondSection = () => (
-  <section className="about-second-section">
-    <div className="container" id="about-section">
-      <div className="about-box">
-        <p>
-          The Glass House Resto hadir sebagai tempat makan yang tak hanya menawarkan cita rasa kuliner, tetapi juga pengalaman visual yang memukau. Terletak di kawasan strategis Jalan Pajajaran Indah Raya, restoran ini menjadi tempat favorit warga lokal maupun wisatawan yang ingin bersantai dalam suasana yang elegan.
-          
-          Sesuai namanya, desain bangunan The Glass House didominasi oleh kaca, menghadirkan kesan luas, terang, dan natural. Sinar matahari yang masuk bebas dari setiap sisi menciptakan suasana hangat yang nyaman, baik siang maupun malam. Desain ini menjadikan restoran ini sangat cocok untuk foto-foto atau sekadar menikmati estetika ruang yang modern.
-        </p>
-      </div>
-    </div>
-  </section>
-);
-
-const Footer = () => (
-  <footer>
-    <p>Footer</p>
-  </footer>
-);
-
-const App = () => (
-  <div>
-    <Header />
-    <Hero />
-    <Menu />
-    <AboutSection />
-    <AboutSecondSection />
-    <Footer />
-  </div>
-);
+  );
+};
 
 export default App;
-
-
-
-// import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
-// import './App.css'
-
-// function App() {
-//   const [count, setCount] = useState(0)
-
-//   return (
-//     <>
-//       <div>
-//         <a href="https://vite.dev" target="_blank">
-//           <img src={viteLogo} className="logo" alt="Vite logo" />
-//         </a>
-//         <a href="https://react.dev" target="_blank">
-//           <img src={reactLogo} className="logo react" alt="React logo" />
-//         </a>
-//       </div>
-//       <h1>Vite + React</h1>
-//       <div className="card">
-//         <button onClick={() => setCount((count) => count + 1)}>
-//           count is {count}
-//         </button>
-//         <p>
-//           Edit <code>src/App.jsx</code> and save to test HMR
-//         </p>
-//       </div>
-//       <p className="read-the-docs">
-//         Click on the Vite and React logos to learn more
-//       </p>
-//     </>
-//   )
-// }
-
-// export default App
