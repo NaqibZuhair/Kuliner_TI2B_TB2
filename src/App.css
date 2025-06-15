@@ -35,7 +35,6 @@
         justify-content: center;
         align-items: center;
         text-align: center;
-        color: white;
         position: relative;
         overflow: hidden;
       }
@@ -689,48 +688,6 @@
 
       /* Enhanced Responsive Design */
       @media (max-width: 768px) {
-        /* Header adjustments */
-        header {
-          padding: 8px 20px;
-        }
-
-        .hamburger {
-          display: flex;
-        }
-
-        .header-nav {
-          position: fixed;
-          top: 0;
-          right: -100%;
-          width: 280px;
-          height: 100vh;
-          background: linear-gradient(135deg, #537d5d 0%, #4a6f54 100%);
-          padding: 80px 30px 30px;
-          box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
-          transition: right 0.3s ease;
-          z-index: 1000;
-        }
-
-        .header-nav.active {
-          right: 0;
-        }
-
-        .header-nav ul {
-          flex-direction: column;
-          gap: 30px;
-          align-items: flex-start;
-        }
-
-        .header-nav li {
-          width: 100%;
-        }
-
-        .header-nav a {
-          display: block;
-          padding: 15px 0;
-          font-size: 18px;
-          border-bottom: 1px solid rgba(239, 228, 210, 0.2);
-        }
 
         /* Hero section */
         .hero-content {

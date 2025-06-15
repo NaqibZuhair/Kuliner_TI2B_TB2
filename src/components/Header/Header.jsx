@@ -56,7 +56,6 @@ const Header = () => {
         </div>
       </header>
 
-      {/* Overlay dikelola oleh React, bukan JS DOM */}
       <div
         className={`mobile-nav-overlay ${menuActive ? 'active' : ''}`}
         onClick={closeMenu}

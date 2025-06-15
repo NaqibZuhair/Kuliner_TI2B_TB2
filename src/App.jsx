@@ -12,10 +12,10 @@ import Header from './components/Header/Header';
 const HeroSection = () => {
   return (
     <section id="hero">
-      <div className="container">
+      <div className="hero-container">
         <div className="hero-content">
           <h1>Glass House</h1>
-          <button>Contact</button>
+          <button onClick={() => window.open('https://www.instagram.com/theglasshouseresto/', '_blank')}>Contact</button>
         </div>
       </div>
     </section>
